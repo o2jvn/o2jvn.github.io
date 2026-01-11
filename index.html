@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pergunta importante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 20px;
+      cursor: pointer;
+    }
+    #nao {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>vou voltar com minha ex?</h1>
+
+  <button onclick="alert('amém que irei voltar, né?')">Sim</button>
+  <button id="nao">Não</button>
+
+  <script>
+    const nao = document.getElementById("nao");
+
+    nao.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      nao.style.left = x + "px";
+      nao.style.top = y + "px";
+    });
+  </script>
+
+</body>
+</html>
